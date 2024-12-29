@@ -194,9 +194,6 @@ button{
     input{
         width: 280px;
     }
-    label{
-
-    }
     .grid{
         grid-template-areas: 
         "f f"
