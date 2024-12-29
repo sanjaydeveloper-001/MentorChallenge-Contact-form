@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main">
+    <h1>Contact Us</h1>
+    <form action="submit">
+      <div class="grid">
+
+        <label class="fn" for="name"><h3>First Name <span>*</span></h3>
+          <input type="text" name="name" id="name">
+        </label>
+        
+        <label class="ln" for="lname"><h3>Last Name <span>*</span></h3>
+          <input  type="text" name="name" id="lname">
+        </label>
+        
+        <label class="em" for="email"><h3>Email Address <span>*</span></h3>
+          <input  type="email" name="email" id="email">
+        </label>
+        
+        <label class="que" for="options"><h3>Quary Type <span>*</span></h3>
+          <div class="choose">
+            <div class="box" id="box1"><input id="list" type="radio" name="Choice">General Enquary</div>
+            <div class="box" id="box2"><input id="list1" type="radio" name="Choice">Support Request</div>
+          </div>
+        </label>
+        
+        <label class="msg" for="box"><h3>Message <span>*</span></h3>
+          <textarea name="text" id="box"></textarea>
+        </label>
+      </div>
+      
+      <div class="check"><input type="checkbox" id="checker">
+        <p for="checker">I consent to being contacted by the team <span>*</span> </p></div>
+      <button for="submit">Submit</button>
+    </form>
+    <script>
+      document.getElementById("box1").addEventListener("click", function() {
+          document.getElementById("list").checked = true;
+          document.getElementById("box1").classList.add("active");
+            document.getElementById("box2").classList.remove("active");
+      });
+
+      document.getElementById("box2").addEventListener("click", function() {
+          document.getElementById("list1").checked = true;
+          document.getElementById("box2").classList.add("active");
+            document.getElementById("box1").classList.remove("active");
+      });
+
+
+      
+  </script>
+  </div>
+
+</body>
+</html>

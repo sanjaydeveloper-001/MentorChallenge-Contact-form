@@ -1,0 +1,232 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif ;
+    font-weight: 100;
+    font-size: 15px;
+}
+body{
+    background-color: hsl(148, 38%, 91%);
+    display: flex;
+    justify-content: center;
+}
+.main{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 600px;
+    width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    gap: 15px;
+}
+h1{
+    font-size: 20px;
+    font-family:sans-serif;
+    font-weight: 700;
+    margin-left: 35px;
+}
+input{
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid hsl(187, 24%, 22%);
+    margin-top: 10px;
+    padding-left: 10px;
+    font-family:sans-serif;
+}
+input:focus{
+    border: 2px solid hsl(169, 82%, 27%);
+    outline: none;
+}
+textarea{
+    padding:10px;
+    height: 100px;
+    width: 530px;
+    border-radius: 5px;
+    border: 1px solid hsl(187, 24%, 22%);
+    margin-top: 10px;
+    resize: none;
+}
+textarea:focus{
+    border: 2px solid hsl(169, 82%, 27%);
+    outline: none;
+}
+
+span{
+    color: hsl(169, 82%, 27%);
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-areas: 
+        "f l"
+        "e e "
+        "q q "
+        "m m "
+    ;
+    justify-content: center;
+    grid-row-gap: 10px;
+    grid-column-gap:10px ;
+    margin: 0 35px;
+}
+.fn{
+    grid-area: f;
+    display: flex;
+    flex-direction: column;
+}
+.ln{
+    grid-area: l;
+    display: flex;
+    flex-direction: column;
+}
+.em{
+    grid-area: e;
+    display: flex;
+    flex-direction: column;
+}
+.que{
+    grid-area: q;
+    display: flex;
+    flex-direction: column;
+}
+.msg{
+    grid-area: m;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+.choose{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 35px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.choose input{
+    margin: 0;
+    height: 15px;
+    width: 15px;
+}
+.box{
+    height: 40px;
+    width: 260px;
+    border: 1px solid hsl(187, 24%, 22%);
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.box:hover{
+    border: 2px solid hsl(169, 82%, 27%);
+}
+.active{
+    background-color: hsl(148, 38%, 91%);
+    border: 2px solid hsl(169, 82%, 27%);
+}
+
+.check{
+    display: flex;
+    margin-left: 35px;
+    gap: 10px;
+    align-items: center;
+    margin-top: 15px;
+}
+.check input{
+    margin: 0;
+    height: 15px;
+    width: 15px;
+    accent-color:hsl(169, 82%, 27%);
+}
+input[type="radio"] {
+    cursor: pointer;
+    accent-color: hsl(169, 82%, 27%);
+}
+
+
+
+button{
+    height: 40px;
+    width: 530px;
+    margin: 15px 35px;
+    border-radius: 5px;
+    background-color:hsl(169, 82%, 27%) ;
+    border: none;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:375px) {
+
+    *{
+        font-size: 10px;
+    }
+    body{
+        height: 1000px;
+    }
+    .main{
+        height: 800px;
+        width: 320px;
+    }
+    h1{
+        margin-left: 20px;
+    }
+    input{
+        width: 280px;
+    }
+    label{
+
+    }
+    .grid{
+        grid-template-areas: 
+        "f f"
+        "l l"
+        "e e"
+        "q q"
+        "m m"
+        ;
+        margin-left: 20px;
+    }
+    .box{
+        width: 280px;
+    }
+    .choose{
+        display:flex;
+        flex-direction: column;
+        margin-left: 50px;
+    }
+    textarea{
+        height: 250px;
+        width: 280px;
+        margin-left: 0px;
+    }
+    
+    .check{
+        margin-left: 20px;
+    }
+    button{
+        width: 280px;
+        margin-left: 20px;
+    }
+}
+
